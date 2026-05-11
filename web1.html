@@ -5,6 +5,13 @@
   <title>Web 1.0</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<head>
+  <style>
+    body{
+      background-color: rgba(221, 210, 221, 0.87);
+    }
+  </style>
+</head>
 <body>
   <header>
     <h1>CONTACT US INFO</h1>
@@ -30,11 +37,36 @@
   </header>
 
   <main>
-    <h2> social media</h2>
-    <p1>You can reach PackNET by phone at +1-800-555-0123, by email at info@packnet.com, or by visiting our office at 123 Networking Boulevard, San Francisco, CA 94105.</p1>
-    <P2>follow us on social media for the latest updates and news!</P2>
-<p3>@PackNet</p3>
-    <img src="images/contact.jpg" alt="Web 1.0 Example">
+    <h2> enter your details below:</h2><br>
+    <p1>You can reach PackNET by phone at +1-800-555-0123, by email at info@packnet.com, or by visiting our office at 123 Networking Boulevard, San Francisco, CA 94105.</p1><br>
+    <P2>follow us on social media for the latest updates and news!</P2><br>
+
+<p3>@PackNet</p3><br>
+<form action="submit_form.php" method="post">
+        <label for="Full Name">Full Name:</label><br>
+        <input type="Full Name" id="Full Name" Full Name="Full Name" placeholder="Enter your Full Name "><br><br>
+        <label for="Email Address">Email Adress:</label><br>
+        <input type="Email Address" id="Email Address" name="Email Address" placeholder="Enter your true Email Address"><br><br>
+        <label for="Phone Number">Phone Number:</label><br>
+        <input type="Phone Number" id="Phone Number" name="Phone Number" placeholder="Enter your Phone Number "maxlength="15"><br><br>
+        <label for="Subject Line">Subject Line:</label><br>
+        <input type="Subject Line" id="Subject Line" name="Subject Line" placeholder="Your Subject Line"><br><br>
+        <label for="Category">Category:</label><br>
+        <select id="Category" name="Category">
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Partnership Opportunities">Partnership Opportunities</option>
+            <option value="Media Inquiries">Media Inquiries</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+        <options for "Category" could include "General Inquiry", "Technical Support", "Partnership Opportunities", "Media Inquiries", etc.><br><br> 
+        <label for="Message">Message</label><br>
+        <input type="Message" id="Message" name="Message" placeholder="Enter your Message"><br><br>
+      
+        <button type="submit"class="submit-button">SEND MESSAGE</button>
+
+
+    </form>
   </main>
 
   <footer>

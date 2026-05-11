@@ -1,44 +1,201 @@
-body {
-  font-family: Arial, sans-serif;
+/* Base */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-  background-color: #350a0a00;
-  color: rgb(192, 212, 209);
-  padding: 10px;
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #4ca4fd;
+  color: #1F2937;
+  line-height: 1.5;
 }
 
-.left_side_bar {
-    float: left;
-    width: 10%;
-    background-color: rgba(30, 10, 12, 1);
+/* Container */
+.app-container {
+  display: flex;
+  min-height: 100vh;
 }
 
-.right_side_bar {
-    float: right;
-    width: 10%;
-    background-color: rgba(30, 10, 12, 1);
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: white;
+  border-right: 1px solid #E5E7EB;
+  padding: 24px 16px;
 }
 
-nav a {
-  color: rgb(255, 255, 255);
-  margin: 0 10%;
-  text-decoration: none;
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 24px 32px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* Card */
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  border: 1px solid #F3F4F6;
+  padding: 24px;
+  transition: box-shadow 0.2s;
 }
 
-main {
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Button */
+.btn-primary {
+  background: #3B82F6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2563EB;
+  transform: translateY(-1px);
+}
+
+/* Input */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+}
+
+/* Table (minimal) */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #E5E7EB;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badge-success {
+  background: #D1FAE5;
+  color: #065F46;
+}
+.submit-button {
+  background-color: lightblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.left-sidebar {
+  width: 20%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.right-sidebar {
+  width: 20%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.center-content {
+  width: 60%;
   padding: 20px;
 }
+input[type="text"], input[type="email"], input[type="Phone Number"], input[type="Subject Line"], input[type="Message"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tbody tr:hover {
+  background-color: #ddd;
+}
+contact form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea:focus {
+  border-color: #4A90E2;
+  box-shadow: 0 0 5px rgba(74,144,226,0.5);
+}
 
-footer {
-  background-color: #f4f4f4;
+.centered-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+.center-content header {
   text-align: center;
-  padding: 10%x;
+  margin-bottom: 20px;
+}
+.center-content footer {
+  text-align: center;
   margin-top: 20px;
 }
+.center-content main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+  @media (max-width: 768px) {
+    .three-column-layout {
+      flex-direction: column;
+    }
+    .left-sidebar,.center-content .right-sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .left-sidebar,  .right-sidebar {
+      width: 100%;
+    }
+  }
+  *{
+
+    box-sizing: border-box;
+  }
